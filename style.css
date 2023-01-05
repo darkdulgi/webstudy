@@ -1,0 +1,32 @@
+h1 {
+    font-size: 500%;
+    font-family: Georgia;
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding: 1%;
+    margin: 1%;
+}
+
+#outer {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+#left {
+    color: blue;
+    border-right: 1px solid black;
+}
+
+#right {
+    padding-left: 1%;
+}
+
+@media(max-width:600px) {
+    #outer {
+        display: block;
+    }
+
+    #left {
+        border-right: none;
+    }
+}
