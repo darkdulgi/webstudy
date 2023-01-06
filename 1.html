@@ -4,20 +4,22 @@
         <title></title>
         <meta charset="utf-8">
         <style>
-            div {
-                border: 5px solid black;
-            }
-            #outer{
-                border:5px solid red;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
         </style>
     </head>
     <body>
-        <div id="outer">
-            <div>AAAAAA</div>
-            <div>BBBBBB</div>
+        <div>
+            <input type="button" value="Dark" onclick="
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            ">
+            <input type="button" value="White" onclick="
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            ">
         </div>
+
+        <input type="button" value="Hello" onclick="alert('hi')">
+        <input type="text" onchange="alert('changed')">
+        <h1>Hello</h1>
     </body>
 </html>
