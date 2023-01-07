@@ -5,9 +5,31 @@
     <title>알고리즘</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script>
+        function NightModeHandler(self){
+            if(self.value==='Night'){
+                document.querySelector('body').style.backgroundColor='black';
+                document.querySelector('body').style.color='white';
+                document.querySelector('#left').style.borderColor='white';
+                document.querySelector('h1').style.borderColor='white';
+                self.value='Day';
+            }else{
+                document.querySelector('body').style.backgroundColor='white';
+                document.querySelector('body').style.color='black';
+                document.querySelector('#left').style.borderColor='black';
+                document.querySelector('h1').style.borderColor='black';
+                self.value='Night';
+            }
+            let links=document.querySelectorAll('a');
+            for(let i=0; i<links.length; i++){
+                links[i].style.color=(self.value==='Day'?'powderblue':'blue');
+            }
+        }
+    </script>
 </head>
 
 <body>
+    <input type='button' value='Night' onclick="NightModeHandler(this)">
     <h1>Algorithm</h1>
     <div id="outer">
         <div id="left">
