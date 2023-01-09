@@ -5,31 +5,11 @@
     <title>알고리즘</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <script>
-        function NightModeHandler(self){
-            if(self.value==='Night'){
-                document.querySelector('body').style.backgroundColor='black';
-                document.querySelector('body').style.color='white';
-                document.querySelector('#left').style.borderColor='white';
-                document.querySelector('h1').style.borderColor='white';
-                self.value='Day';
-            }else{
-                document.querySelector('body').style.backgroundColor='white';
-                document.querySelector('body').style.color='black';
-                document.querySelector('#left').style.borderColor='black';
-                document.querySelector('h1').style.borderColor='black';
-                self.value='Night';
-            }
-            let links=document.querySelectorAll('a');
-            for(let i=0; i<links.length; i++){
-                links[i].style.color=(self.value==='Day'?'powderblue':'blue');
-            }
-        }
-    </script>
+    <script src="color.js"></script>
 </head>
 
 <body>
-    <input type='button' value='Night' onclick="NightModeHandler(this)">
+    <input type='button' value='Night' onclick='NightModeHandler(this)'>
     <h1>Algorithm</h1>
     <div id="outer">
         <div id="left">
@@ -37,7 +17,8 @@
                 <li>요약</li>
                 <li>이름</li>
                 <li>정의</li>
-                <li><a href="1.html">링크</a></li>
+                <li><a href="1.html">유클리드 호제법</a></li>
+                <li><a href="test.html">링크</a></li>
                 <li><a href="https://ko.wikipedia.org/wiki/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" target="_blank">출처</a>
                 </li>
             </ol>
